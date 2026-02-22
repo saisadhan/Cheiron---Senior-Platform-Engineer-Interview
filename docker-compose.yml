@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  service1:
+    image: 241789449863.dkr.ecr.us-west-2.amazonaws.com/service1:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    restart: always
+
+  service2:
+    image: 241789449863.dkr.ecr.us-west-2.amazonaws.com/service2:latest
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=production
+    restart: always
